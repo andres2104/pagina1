@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarea</title>
+    <script>
+        function suma() {
+            var n1 = document.form.op1.value;
+            var n2 = document.form.op2.value;
+
+            a = parseFloat(n1);
+            b = parseFloat(n2);
+
+            res = a  + b;
+            
+            document.form.re.value = res;
+        }
+        function resta() {
+            var n1 = document.form.op1.value;
+            var n2 = document.form.op2.value;
+
+            a = parseFloat(n1);
+            b = parseFloat(n2);
+
+            res = a - b;
+            
+            document.form.re.value = res;
+        }
+        function producto() {
+            var n1 = document.form.op1.value;
+            var n2 = document.form.op2.value;
+
+            a = parseFloat(n1);
+            b = parseFloat(n2);
+
+            res = a * b;
+            
+            document.form.re.value = res;
+        }
+        function division() {
+            var n1 = document.form.op1.value;
+            var n2 = document.form.op2.value;
+
+            a = parseFloat(n1);
+            b = parseFloat(n2);
+
+            res = a / b;
+            
+            document.form.re.value = res;
+        }
+        function modulo() {
+            var n1 = document.form.op1.value;
+            var n2 = document.form.op2.value;
+
+            a = parseFloat(n1);
+            b = parseFloat(n2);
+
+            res = a % b;
+            
+            document.form.re.value = res;
+        }
+        function factorial() {
+            var n1 = document.form.op1.value;
+            a = parseFloat(n1);
+            fac = 1;
+            for(i = 1; i <= a; i++){
+                fac = fac * i;
+            }
+            document.form.re.value = fac; // CON ESTA LINEA LE DICES DONDE MOSTRAR, ENTRAMOS A FORM, RE Y MOSTRAMOS LO DE LA VARIABLE fac
+        }
+        function fibonacci() {
+            var n1 = document.form.op3.value;
+            var fin = parseFloat(n1);
+            var a = -1;
+            var b = 1;
+            var c;
+            var resultado = "";
+            for(i = 1; i <= fin; i++){
+                c = a + b;
+                resultado += ", " + c;
+                a = b;
+                b = c;
+            }
+            document.form.re.value = resultado;
+        }
+    </script>
+</head>
+<body>
+    <form name="form">
+        <table border="1" align="center" cellspacing="0" cellpadding="10">
+            <tr>
+                <td rowspan="4" align="center" bgcolor="#122932">
+                    <input type="button" value="Sumar" onclick=suma();> <br> <br>
+                    <input type="button" value="Restar" onclick=resta();> <br> <br>
+                    <input type="button" value="Producto" onclick=producto();> <br> <br>
+                    <input type="button" value="Division" onclick=division();> <br> <br>
+                    <input type="button" value="Modulo" onclick=modulo();> <br> <br>
+                    <input type="button" value="Factorial" onclick=factorial();> <br> <br>
+                    <input type="button" value="fibonacci" onclick=fibonacci();>
+                </td>
+                <td align="center" bgcolor="#BFD7EA"><b>X</b></td>
+                <td bgcolor="#6D6A75"><input type="text" name="op1"></td>
+            </tr>
+            <tr>
+                <td align="center" bgcolor="#BFD7EA"><b>Y</b></td>
+                <td bgcolor="#6D6A75"><input type="text" name="op2"></td>
+            </tr>
+            <tr>
+                <td align="center" bgcolor="BFD7EA"><b>N</b></td>
+                <td bgcolor="#6D6A75"><input type="text" name="op3"></td>
+            </tr>
+            <tr>
+                <td align="center" bgcolor="BFD7EA"><b>Resultado</b></td>
+                <td bgcolor="#6D6A75"><input type="text" name="re"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
